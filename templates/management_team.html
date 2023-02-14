@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Management Team | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Management Team{% endblock page_name %}
+{% block page_link %}<a href="{% url 'main_application:management-team' %}">Management Team</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+
+<section class="section-padding doctors-team-style-2">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Management Team Members</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+       <!--         <div class="row">
+                    {% for mt_list in management_team %}
+                            <div class="col-md-3 " style="padding-right:10px; float: left">
+                                        <div class="team-block p-relative">
+                                            <div class="inner-box">
+                                                <div class="image animate-img">
+                                                    <img src="{{ mt_list.profile_pic.url }}" alt="img" class="full-width">
+                                                    <div class="overlay-box">
+                                                        <div class="overlay-inner p-relative full-height">
+                                                            <ul class="team-social-box custom">
+                                                                <li class="youtube"><a href="#" class="fab fa-youtube fs-16"></a></li>
+                                                                <li class="linkedin"><a href="#" class="fab fa-linkedin fs-16"></a></li>
+                                                                <li class="facebook"><a href="#" class="fab fa-facebook-f fs-16"></a></li>
+                                                                <li class="twitter"><a href="#" class="fab fa-twitter fs-16"></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lower-content p-relative text-center">
+                                                    <h4><a href="#" class="text-custom-black fw-600 fs-20">{{ mt_list.member_name }}</a></h4>
+                                                    <p class="designation text-light-white">{{ mt_list.designation }}</p>
+                                                    <p class="designation text-light-white">{{ mt_list.institution }}</p>
+                                                </div>
+                                            </div>
+
+
+                                </div>
+                            </div>
+
+                    {% endfor %}
+                </div>
+                -->
+                            <div class="row doctors-team style-2">
+                                                    {% for mt_list in management_team %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{{ mt_list.profile_pic.url }}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">{{ mt_list.member_name }}</a></h6>
+                                <p class="text-light-white">{{ mt_list.designation }}</p>
+                                <p class="text-light-white">{{ mt_list.institution }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
+
+

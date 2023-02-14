@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}{{ department.department_name}} | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}{{ department.department_name}}{% endblock page_name %}
+{% block page_link %}<a  style="color: #e63a3a;" href="{% url 'main_application:department-list' %}">Department</a>{% endblock page_link %}
+{% block page_link_1 %}<a  style="color: #e63a3a;" href="{{ department.get_absolute_url }}">{{ department.department_name}}</a>{% endblock page_link_1 %}
+{% load static %}
+{% block content %}
+        {% load home_extras %}
+        <!-- Start Service -->
+        <section class="section-padding bg-light-white service-page">
+            <div class="container">
+                <div class="row">
+
+                   <div class="col-lg-12">
+                        <div class="col-12">
+                            <div class="service-detail-sec bg-custom-white bx-wrapper">
+                                <div class="services-detail-slider mb-xl-30">
+                                    <div class="service-image">
+                                        <img src="{{ department.department_image.url }}" class="image-fit" alt="department_image">
+                                        <div class="overlay overlay-bg-black"></div>
+                                        <div class="service-text-wrapper transform-center">
+                                            <h3 class="text-custom-white">{{ department.department_name }}</h3>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="service-meta mb-xl-30">
+                                    <p class="text-light-white">{{ department.department_description|safe }}</p>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="service-form padding-20 bg-custom-white bx-wrapper">
+                                        <h4 class="text-custom-black fw-600">Doctors</h4>
+                                           <div class="row doctors-team style-2">
+                                               {% for doc_list in doctor_list %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{{ doc_list.profile_pic.url}}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="{{ doc_list.get_absolute_url }}" class="text-custom-black fw-700">{{ doc_list.doctor_name }}</a></h6>
+                                <p class="text-light-white">{{ doc_list.designation }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                </div>
+                </div>
+        </section>
+        <!-- End Service -->
+
+{% endblock %}

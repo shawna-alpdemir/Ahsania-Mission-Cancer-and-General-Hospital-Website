@@ -1,0 +1,107 @@
+   {% extends 'base.html' %}
+{% block title %}Gallery | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Gallery{% endblock page_name %}
+{% block page_link %}<a href="{% url 'main_application:gallery' %}">Gallery</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+
+
+        <section class="section-padding gallery-style-2 style-3">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Gallery</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+         <!--       <div class="row"  style="padding: 20px;" >
+                    <div class="col-8">
+                    </div>
+                       <div class="col-6">
+
+                           <form class="form-inline">
+
+                    <div class="form-group mx-sm-3 mb-2 select">
+                            <select class="form-control" name="category" >
+                                <option value="All">All</option>
+                                {% for category_list in gallery_category %}
+                                    <option value="{{ category_list.category_name }}">{{ category_list.category_name }}</option>
+                                {% endfor %}
+
+                            </select>
+  </div>
+  <button type="submit" class="btn-first btn-submit text-light-blue mb-2">Submit</button>
+</form>
+
+                    </div>
+                </div>
+                -->
+                <div class="row gallery-grid">
+                    {% for gallery_images in filterd_gallery %}
+                    <div class="col-lg-4 col-sm-6 filter-box category_name">
+                        <div class="gallery-item animate-img mb-xl-30">
+                            <a href="{{ gallery_images.gallery_image.url}}" class="popup">
+                                <img src="{{ gallery_images.gallery_image.url }}" class="image-fit" alt="img">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+<style>
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: #2c3e50;
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+/* Other styles*/
+h1 {
+  margin: 0 0 0.25em;
+}
+
+</style>
+
+  {% endblock %}

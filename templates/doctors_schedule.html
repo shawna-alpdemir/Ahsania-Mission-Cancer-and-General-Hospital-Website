@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% block title %}Doctor's Schedule | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Doctor's Schedule{% endblock page_name %}
+{% block page_link %}<a href="{% url 'main_application:Doctors-Schedule' %}">Doctor's Schedule</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+        <section class="section-padding doctor-calendar">
+            <div class="container" style="max-width: 1600px;">
+                <!--<div class="section-header">-->
+                <!--    <div class="section-heading">-->
+                <!--        <h3 class="text-custom-white fw-700">Doctors Schedule</h3>-->
+                <!--        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">-->
+                <!--        <div class="section-description">-->
+                <!--            <p class="text-custom-white">-->
+
+                <!--            </p>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="doctor-calendar-table table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Time(Am-Pm)</th>
+                                        <th>Saturday</th>
+                                        <th>Sunday</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><span class="time" >9.00-4.00</span></td>
+                                        <td>
+                                            <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Holiday</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Foley</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">9.00-3.00</span></td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                            <br><h3>&</h3><br> <h3>Dr. Abul Ahsan (Didar)</h3><span>Pain & Palliative Care</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                             <br><h3>&</h3><br>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+
+                                        </td>
+
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">10.00-2.00</span></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Parveen</h3>
+                                            <span>Medical Oncologist</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">3.00-5.00</span></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr. Sadia Sharmin</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="time">5.00-10.00</span></td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Md. Shariful Islam Johnny</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Md. Shariful Islam Johnny</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

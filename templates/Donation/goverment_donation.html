@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Goverment Donation | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Goverment Donation{% endblock page_name %}
+{% load static %}
+{% block content %}
+
+<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-4">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+						  <thead class="thead-primary">
+						    <tr>
+                                <th>Logo</th>
+						      <th>Name</th>
+						      <th>Amount</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+                          {% for instance in gv_donation %}
+						    <tr class="alert" role="alert">
+						    	<td>
+						    		<div class="img" style="width: 40px; height: 40px;">
+                                        <img src="{{ instance.logo.url }}">
+                                    </div>
+						    	</td>
+						      <td>
+						      	<div class="email">
+						      		<span>{{ instance.name}} </span>
+						      	</div>
+						      </td>
+						      <td>{{ instance.amount }}</td>
+
+						    </tr>
+                             {% endfor %}
+					      </tbody>
+					   </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<style>
+img {
+  vertical-align: middle;
+  border-style: none; }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Governing Body | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Governing Body{% endblock page_name %}
+{% block page_link %}<a href="{% url 'main_application:governing-body' %}">Governing Body</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+
+{#            <section class="main-services" style="padding-top: 30px;">#}
+{#            <div class="container">#}
+{##}
+{#                        <div class="section-description">#}
+{#                            <p class="text-dark">#}
+{#                               Dhaka Ahsania Mission (DAM) has recently re-constituted the Governing body of Ahsania Mission Cancer and General Hospital (AMCGH), Uttara for a period of 2 years from February-2021 with the following persons:                            </p>#}
+{##}
+{#                        </div>#}
+{##}
+{##}
+{#                    </div>#}
+{##}
+{#        </section>#}
+{##}
+{#<div class="container-xl">#}
+{#    <div class="table-responsive">#}
+{##}
+{#            <table class="table table-striped table-hover">#}
+{#                <thead>#}
+{#                    <tr>#}
+{#                        <th>#</th>#}
+{#                        <th>Name</th>#}
+{#                        <th>Date Created</th>#}
+{#                        <th>Role</th>#}
+{#                        <th>Status</th>#}
+{#                        <th>Action</th>#}
+{#                    </tr>#}
+{#                </thead>#}
+{#                <tbody>#}
+{#                {% for gb in gb %}#}
+{#                    <tr>#}
+{#                        <td>{{ gb.member_name }}</td>#}
+{#                        <td>{{ gb.institution }}</td>#}
+{#                        <td>{{ gb.designation }}</td>#}
+{##}
+{##}
+{#                    </tr>#}
+{#                {% endfor %}#}
+{#                </tbody>#}
+{#            </table>#}
+{##}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+    <section class="section-padding doctors-team-style-2">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Governing Body</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Dhaka Ahsania Mission (DAM) has recently re-constituted the Governing body of Ahsania Mission Cancer and General Hospital (AMCGH), Uttara for a period of 2 years from February-2021 with the following persons:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row doctors-team style-2">
+                                                    {% for gb in gb %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{{ gb.profile_pic.url }}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="#" class="text-custom-black fw-700">{{ gb.member_name }}</a></h6>
+                                <p class="text-light-white">{{ gb.designation }}</p>
+
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+                </div>
+            </div>
+        </section>
+{% endblock %}
+

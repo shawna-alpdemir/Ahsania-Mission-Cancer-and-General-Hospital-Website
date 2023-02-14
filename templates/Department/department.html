@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Departments | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Departments{% endblock page_name %}
+{% block page_link %}<a  style="color: #e63a3a;" href="{% url 'main_application:department-list' %}"> All Departments</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+
+         <section class="main-services section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Departments</h3>
+                        <img src="{% static 'Assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+
+                            <form method="get">
+                                <input type="search" class="form-control form-control-custom" name="q" placeholder="Search..." value="">
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    {% for instance in dept_list %}
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="main-services-box p-relative mb-xl-30">
+                            <div class="main-service-wrapper padding-20">
+                                <div class="icon-box">
+                                    <img src="{{ instance.department_image.url }}">
+                                </div>
+                                <h5 class="fw-700"><a href="{{ instance.get_absolute_url }}?departments={{ instance.department_name }}" class="text-light-grey">{{ instance.department_name }}</a></h5>
+                                <p class="text-light-white no-margin">Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.</p>
+                            </div>
+                        </div>
+                    </div>
+    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

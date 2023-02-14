@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Doctors | Ahsania Mission Cancer & General Hospital{% endblock title %}
+{% block page_name %}Doctors{% endblock page_name %}
+{% block page_link %}<a  style="color: #e63a3a;" href="{% url 'main_application:doctor-list' %}">Doctors</a>{% endblock page_link %}
+{% load static %}
+{% block content %}
+
+
+    <section class="section-padding bg-light-white our-articles">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-lg-4">
+                        <div class="sidebar_wrap mb-md-80">
+                            <div class="sidebar">
+                               <!-- <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Search</h5>
+                                    </div>
+                                    <form>
+                                        <div class="form-group mb-0">
+                                            <div class="search p-relative">
+                                                <input type="search" name="name_department" class="form-control form-control-custom" placeholder="">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                -->
+                                <div class="sidebar_widgets mb-xl-30">
+                                    <div class="widget_title bg-light-blue">
+                                        <h5 class="no-margin text-custom-white fw-600">Departments</h5>
+                                    </div>
+                                    <ul class="categories custom">
+                                        <li>
+                                            <a href="{% url 'main_application:doctor-list' %}" class="text-custom-black fs-14">All <span class="text-light-white"></span></a>
+                                        </li>
+                                        {% for slug in departments_slug %}
+                                             <li>
+                                            <a href="{{ slug.get_absolute_url }}" class="text-custom-black fs-14">{{ slug.name }} <span class="text-light-white"></span></a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+        <div class="col-lg-8">
+              <div class="row doctors-team style-2">
+                    {% for doc_list in doctor %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="doctor-item mb-md-30">
+                            <div class="doctor-img mb-xl-20">
+                                <img src="{{ doc_list.profile_pic.url }}" class="full-width" alt="image">
+                            </div>
+                            <div class="doctor-content">
+                                <h6><a href="{{ doc_list.get_absolute_url }}" class="text-custom-black fw-700">{{ doc_list.doctor_name}}</a></h6>
+                                 <p class="text-custom-black fw-400 fs-14">
+                                                        {% for department in doc_list.department.all %}
+                                                <a href="{{ department.get_absolute_url }}?departments={{ department.department_name }}">{{ department.department_name }}</a>
+                                                    {% endfor %}
+                                                    </p>
+                                <ul class="custom">
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+{% endfor %}
+
+                </div>
+         </div>
+       </div>
+     </div>
+</section>
+
+{% endblock %}
+
+
+
+

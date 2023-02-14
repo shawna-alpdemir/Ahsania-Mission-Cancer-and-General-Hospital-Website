@@ -1,0 +1,1264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="Medical,Hospital,AMCGH, Cancer, General">
+    <meta name="description" content="This is reputated Cancer Hospital in Bangladesh">
+    <title>Ahsania Mission Cancer & General Hospital(AMCGH)</title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="#">
+    <link rel="shortcut icon" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+    <!-- Bootstrap -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- Flaticons -->
+    <link href="{% static 'assets/css/font/flaticon.css' %}" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="{% static 'assets/css/slick.css' %}" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="{% static 'assets/css/ion.rangeSlider.min.css' %}" rel="stylesheet">
+    <!-- Datepicker -->
+    <link href="{% static 'assets/css/datepicker.css' %}" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="{% static 'assets/css/nice-select.css' %}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        	element.addEventListener('click', function (e) {
+        		e.stopPropagation();
+        	});
+        })
+    });
+	// DOMContentLoaded  end
+</script>   <!-- place -->
+</head>
+<body class="animated-banner">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "450371562013630");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Start Main Body -->
+    <div class="main-body">
+        <!-- Start Header -->
+        <header class="style-3 header-style-1 bg-custom-white">
+            <!-- Start Topbar -->
+            <div class="topbar-style-1 bg-light-blue">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="left-side" style="padding-top: 10px;">
+                                <div class="language-box">
+                                     <p class="text-custom-yellow-light no-margin">
+                                    Hotline: 10617
+                                </p>
+                                </div>
+                                <p class="text-custom-white no-margin">
+                                    Embankment Highway, Uttara-10, Dhaka-1230
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="right-side">
+                               <ul class="custom">
+                                    <li>
+                                        <a class="live text-custom-white fs-14" href="{% url 'main_application:Doctors-Schedule' %}">
+                                            <i class="fas fa-circle">
+                                            </i>Doctor's Schedule</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main-navigation-style-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="navigation">
+                                <div class="logo">
+
+                                    <a href="{% url 'main_application:Home' %}">
+                                        <img src="{% static 'assets/images/amcgh-logo (2).png' %}" class="img-fluid image-fit " alt="Logo">
+
+                                    </a>
+                                </div>
+                                <div class="main-menu">
+                                    <div class="mobile-logo">
+                                        <a href="{% url 'main_application:Home' %}">
+                                            <img src="{% static 'assets/images/apple-icon-144x144.png' %}" class="img-fluid image-fit" alt="Logo">
+                                        </a>
+                                    </div>
+                                    <nav>
+                                        <ul class="custom" style="padding: 0px;">
+
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="#" class="text-custom-green">About Us</a>
+                                                 <ul class="custom sub-menu" style="padding: 0px;">
+                                                    <li class="menu-item">
+                                                        <a href="{% url 'main_application:whoWeAre' %}" class="text-light-grey">Who We Are</a>
+                                                    </li>
+                                                 <li class="menu-item">
+                                                        <a href="{% url 'main_application:mission&vission' %}" class="text-light-grey">Mission & Vision</a>
+                                                    </li>
+                                                       <li class="menu-item">
+                                                        <a href="{% url 'main_application:governing-body' %}" class="text-light-grey">Governing Body</a>
+                                                    </li>
+                                                       <li class="menu-item">
+                                                        <a href="{% url 'main_application:management-team' %}" class="text-light-grey">Management Team</a>
+                                                    </li>
+                                                       <li class="menu-item">
+                                                        <a href="{% url 'main_application:backgroundHistory' %}" class="text-light-grey">Background History</a>
+                                                    </li>
+                                                           <li class="menu-item menu-item-has-children">
+                                                        <a href="#" class="text-light-grey">Donation</a>
+                                                     <ul class="custom sub-menu" style="padding: 0px;">
+                                                         <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Goverment-Donation' %}" class="text-light-grey">Goverment Donations</a>
+                                                         </li>
+                                                          <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Corporate-Donation' %}" class="text-light-grey">Corporate Donations</a>
+                                                         </li>
+                                                             <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Corporate-Donation(Others)' %}" class="text-light-grey">Other Corporate Donations</a>
+                                                         </li>
+                                                           <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Donation-Overseas' %}" class="text-light-grey">Overseas donation</a>
+                                                         </li>
+                                                         <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Donation-Over-10Lac' %}" class="text-light-grey">Donation Over 10Lac</a>
+                                                         </li>
+                                                         <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Donation-Over-5Lac' %}" class="text-light-grey">Donation Over 5Lac to 10Lac</a>
+                                                         </li>
+                                                         <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Donation-Over-1Lac' %}" class="text-light-grey">Donation Over 1Lac to 5Lac</a>
+                                                         </li>
+                                                         <li class="menu-item">
+                                                                       <a href="{% url 'main_application:Donation-Over-10k' %}" class="text-light-grey">Donation Over 10K to 1Lac</a>
+                                                         </li>
+
+                                                     </ul>
+
+
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="#" class="text-custom-green">News & Events</a>
+                                                <ul class="custom sub-menu" style="padding: 0px;">
+                                                    <li class="menu-item">
+                                                        <a href="{% url 'main_application:News-List' %}" class="text-light-grey">News</a>
+                                                    </li>
+                                                 <li class="menu-item">
+                                                        <a href="{% url 'main_application:gallery' %}" class="text-light-grey">Photo Gallery</a>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                           <li class="menu-item">
+                                                        <a href="{% url 'main_application:doctor-list' %}" class="text-custom-green">Our Doctors</a>
+                                                    </li>
+
+                                            <li class="menu-item menu-item-has-megamenu">
+                                                        <a href="#" class="text-custom-green">Departments</a>
+                                                <ul class="custom megamenu" style="padding-top:15px; padding-bottom: 15px; padding-left: 30px;">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                <h5 style="padding-top: 0; font-weight: 600; color: green;" >Oncology Department</h5>
+                                                    {% for departments in department_1 %}
+                                                    <li class="menu-item" style="padding-top: 5px; font-size: 15px;">
+                                                        <a href="{{ departments.get_absolute_url }}?departments={{ departments.department_name }}" class="text-light-grey">{{ departments.department_name }}</a>
+                                                    </li>
+
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="col-md-3">
+                                                <h5 style="padding-top: 0; font-weight: 600; color: green;" >All Department</h5>
+                                                    {% for departments in department_2 %}
+                                                    <li class="menu-item" style="padding-top: 5px; font-size: 15px;">
+                                                        <a href="{{ departments.get_absolute_url }}?departments={{ departments.department_name }}" class="text-light-grey">{{ departments.department_name }}</a>
+                                                    </li>
+
+                                                    {% endfor %}
+                                                </div>
+                                                     <div class="col-md-3">
+                                                    {% for departments in department_3 %}
+                                                    <li class="menu-item" style="padding-top: 5px; font-size: 15px;">
+                                                        <a href="{{ departments.get_absolute_url }}?departments={{ departments.department_name }}" class="text-light-grey">{{ departments.department_name }}</a>
+                                                    </li>
+
+                                                    {% endfor %}
+                                                </div>
+                                                     <div class="col-md-3">
+                                                    {% for departments in department_4 %}
+                                                    <li class="menu-item" style="padding-top: 5px; font-size: 15px;">
+                                                        <a href="{{ departments.get_absolute_url }}?departments={{ departments.department_name }}" class="text-light-grey">{{ departments.department_name }}</a>
+                                                    </li>
+
+                                                    {% endfor %}
+                                                </div>
+                                                </div>
+
+
+                                                </ul>
+
+
+                                                    </li>
+
+                                            <li class="menu-item menu-item-has-children">
+                                                        <a href="#" class="text-custom-green">Visitors & Patients</a>
+                                                 <ul class="custom sub-menu" style="padding: 0px;">
+                                                    <li class="menu-item">
+                                                        <a href="{% url 'main_application:service-list' %}" class="text-light-grey">Services</a>
+                                                    </li>
+                                                 <li class="menu-item">
+                                                        <a href="#" class="text-light-grey">Facilities</a>
+                                                    </li>
+                                                <li class="menu-item">
+                                                        <a href="#" class="text-light-grey">Packages</a>
+                                                    </li>
+                                                <li class="menu-item">
+                                                        <a href="#" class="text-light-grey">Room Rent</a>
+                                                    </li>
+                                                <li class="menu-item">
+                                                        <a href="#" class="text-light-grey">Equipments</a>
+                                                    </li>
+
+                                                </ul>
+                                                    </li>
+
+                                                 <li class="menu-item">
+                                                        <a href="{% url 'main_application:career' %}" class="text-custom-green">Career</a>
+                                                    </li>
+
+                                            <li class="menu-item">
+                                                <a href="{% url 'main_application:contact-us' %}" class="text-custom-green">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+                                <div class="hamburger-menu">
+                                    <div class="menu-btn">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navigation -->
+        </header>
+
+
+        <!-- End Header -->
+        <!-- Start Slider -->
+ <div class="slider parallax" id="banner-animation">
+            <div class="transform-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="banner-slider">
+                                <div class="slide-item">
+                                    <div class="banner-text">
+                                        <h1 class="text-custom-white fw-700">Best Care <br>Best Treatment </h1>
+                                        <p class="text-custom-white">Bind brought it harvest super unpack that secular accountability group special music. Theology seeing the fruit oceans outreach, treasure that very relational father</p>
+                                        <a href="#" class="btn-first btn-submit text-light-blue">
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-item">
+                                    <div class="banner-text">
+                                        <h1 class="text-custom-white fw-700">We Flexible Managed Dental Services </h1>
+                                        <p class="text-custom-white">Bind brought it harvest super unpack that secular accountability group special music. Theology seeing the fruit oceans outreach, treasure that very relational father</p>
+                                        <a href="#" class="btn-first btn-submit text-light-blue">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Slider -->
+        <!-- Start Intro -->
+        <section class="genmed-intro">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 no-padding">
+                        <div class="intro-box bg-light-blue full-height">
+                            <div class="intro-wrapper text-center">
+                                <i class="flaticon-flag"></i>
+                                <h4 class="text-custom-white fw-700">Find Your Doctor</h4>
+                                <p class="text-custom-white">Here You can search the best cancer doctor available</p>
+                                <a href="tel:" class="btn-first btn-submit-white fw-600"><i class="fas fa-search"></i> Doctor-></a>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 no-padding">
+                        <div class="intro-box bg-light-blue full-height">
+                            <div class="intro-wrapper text-center">
+                                <i class="flaticon-flag"></i>
+                                <h4 class="text-custom-white fw-700">Appointments</h4>
+                                <p class="text-custom-white">We have 24-hour call center service for proper doctor appointment.</p>
+                                <a href="tel:" class="btn-first btn-submit-white fw-600"><i class="fas fa-phone-alt"></i> 10617</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 no-padding">
+                        <div class="intro-box bg-light-blue full-height">
+                            <div class="intro-wrapper text-center">
+                                <i class="flaticon-flag"></i>
+                                <h4 class="text-custom-white fw-700">Emergency Cases</h4>
+                                <p class="text-custom-white">We have 24-Hour Emergency service in our hospital for yor convinience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Intro -->
+        <!-- Start About -->
+        <section class="section-padding-top about-sec">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="section-header">
+                            <div class="section-heading">
+                                <h3 class="text-custom-black fw-700">Message from the President of Governing Body</h3>
+
+                                <div class="section-description">
+                                    <p class="text-light-white">
+                                        Cancer is no longer considered a mortal disease provided it is detected and treated in time.Bangladesh has a number of hospitals which are providing world class treatment in curing various diseases but not Cancer.Cancer treatment, requiring a very long and expensive procedure, is still beyond the reach of the average people of our country, let alone the question of the poor masses. To the general mass Cancer is a killer of the patients as well as their families because of the exorbitant treatment cost which drains out a family fortune.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-wrapper mb-xl-80">
+
+                            <div class="signature mb-xl-40">
+                                <span class="fs-14 text-light-blue fw-600">Kazi Rafiqul Alam, President of AMCGH</span>
+                            </div>
+                            <a href="{% url 'main_application:messageFromPresident' %}" class="btn-first btn-submit text-light-blue">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 align-self-center">
+                        <div class="doctor-img">
+                            <img src="{% static 'assets/images/President.jpg' %}" class="img-fluid image-fit" alt="President Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="about-counter section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter-box mb-md-40">
+                            <div class="counter-icon">
+                                <i class="flaticon-medical"></i>
+                            </div>
+                            <div class="counter">
+                                <span class="count text-custom-white">800</span>
+                                <span class="fs-16 text-custom-white">Satisfied Patients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter-box mb-md-40">
+                            <div class="counter-icon">
+                                <i class="flaticon-doctor"></i>
+                            </div>
+                            <div class="counter">
+                                <span class="count text-custom-white">350</span>
+                                <span class="fs-16 text-custom-white">Certified Doctor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter-box mb-xs-40">
+                            <div class="counter-icon">
+                                <i class="flaticon-award"></i>
+                            </div>
+                            <div class="counter">
+                                <span class="count text-custom-white">250</span>
+                                <span class="fs-16 text-custom-white">Winning Awards</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="counter-box">
+                            <div class="counter-icon">
+                                <i class="flaticon-balloons"></i>
+                            </div>
+                            <div class="counter">
+                                <span class="count text-custom-white">25</span>
+                                <span class="fs-16 text-custom-white">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About -->
+        <!-- Start Main Services -->
+        <section class="main-services section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Services</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section-btn">
+                        <a href="{% url 'main_application:service-list' %}" class="btn-first btn-submit text-light-blue">View More</a>
+                    </div>
+                </div>
+
+                           <div class="row">
+                    {% for service in service_list %}
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="main-services-box p-relative mb-xl-30">
+                            <div class="main-service-wrapper padding-20">
+                                <div class="icon-box">
+                                    <img src="{{ service.logo.url }}">
+                                </div>
+                                <h5 class="fw-700"><a href="{{ service.get_absolute_url }}" class="text-custom-black">{{ service.service_name }}</a></h5>
+                                <p class="text-light-white no-margin">Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.</p>
+                            </div>
+                        </div>
+                    </div>
+    {% endfor %}
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Department-->
+
+       <section class="section-padding features-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 align-self-center">
+                        <div class="section-header pb-0">
+                            <div class="section-heading">
+                                <h3 class="text-custom-black fw-700">Our Departments</h3>
+                                <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                                <div class="section-description">
+                                    <p class="text-light-white">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-light-white">
+                            On the other hand, we denounce with righteous indignation the fault annuals dislike men who are so beguiled and demoralized by the nuhaiicharms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound toen sue; and equal blame belongs to those who fail in their duty.
+                        </p>
+
+                      <div class="section-btn">
+                        <a href="{% url 'main_application:department-list' %}" class="btn-first btn-submit text-light-blue">View More</a>
+                    </div>
+                    </div>
+
+
+                 <div class="col-xl-7 col-lg-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="features-wrapper first-box">
+                                    {% for department_home in department_home_list_1 %}
+                                    <div class="card-container mb-xl-30">
+                                        <div class="card">
+                                            <div class="side">
+                                                <img src="{{  department_home.department_image.url }}" class="image-fit" alt="Jimmy Eat World" style='opacity: 0.8;'>
+                                                <div class="front-text">
+                                                    <h3 class="text-custom-white no-margin fw-600">{{ department_home.department_name }}</h3>
+                                                </div>
+                                            </div>
+                                            <div class="side back">
+                                                <p class="fs-16 no-margin">{{ department_home.department_short_description}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="features-wrapper">
+                    {% for department_home in department_home_list_2 %}
+                                    <div class="card-container mb-xl-30">
+                                        <div class="card">
+                                            <div class="side">
+                                                <img src="{{  department_home.department_image.url }}" class="image-fit" alt="Jimmy Eat World" style='opacity: 0.8;'>
+                                                <div class="front-text" >
+                                                    <h3 class="text-custom-white no-margin fw-600">{{ department_home.department_name }}</h3>
+                                                </div>
+                                            </div>
+                                            <div class="side back">
+                                                <p class="fs-16 no-margin" style="font-size: 16px;">{{ department_home.department_short_description}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End Department -->
+
+        <!-- Start why choose us -->
+        <section class="why-choose-us-style-2 section-padding bg-light-white">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Facilities</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                You can get more facilities from our hospital.                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="square-tabs">
+                            <ul class="nav nav-tabs custom">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#Linear-Accelerator">Linear Accelerator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#CT-Simulator">CT Simulator</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#Cobalt-60-Teletherapy">Cobalt-60 Teletherapy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#HDR-Brachytherapy">HDR Brachytherapy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#Dual-Head-SPECT">Dual Head SPECT</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content padding-20 bg-custom-white">
+                                <div class="tab-pane container active" id="Linear-Accelerator">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{% static 'assets/images/special_facilities/Linear-Accelerator.jpg' %}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black">What does Linear Accelerator do?</h4>
+                                                    <p class="text-light-white">A medical linear accelerator (LINAC) is the device most commonly used for external beam radiation treatments for patients with cancer. It delivers high-energy x-rays or electrons to the region of the patient's tumor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane container fade" id="CT-Simulator">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{% static 'assets/images/special_facilities/CT-Simulator.jpg' %}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black">What is a CT Simulator?</h4>
+                                                    <p class="text-light-white">A CT simulator (CT-S) is a real-time, CT-linked, 3-D treatment planning system, which consists of a CT scanner, a multi-image display, a treatment planning device with real-time visual optimization, and a laser beam projector.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane container fade" id="Cobalt-60-Teletherapy">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{% static 'assets/images/special_facilities/Cobalt-60-Teletherapy.jpg' %}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black">What does Cobalt-60-Teletherapy do?</h4>
+                                                    <p class="text-light-white">Cobalt therapy is the medical use of gamma rays from the radioisotope cobalt-60 to treat conditions such as cancer. Beginning in the 1950s, cobalt-60 was widely used in external beam radiotherapy (teletherapy) machines, which produced a beam of gamma rays which was directed into the patient's body to kill tumor tissue.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane container fade" id="HDR-Brachytherapy">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{% static 'assets/images/special_facilities/HDR-Bracytharapy.jpg' %}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black">What does HDR-Brachytherapy do?</h4>
+                                                    <p class="text-light-white">HDR(High-Dose Rate) brachytherapy is a form of internal radiotherapy where an oncologist:<br><br>
+
+1.Temporarily implants a catheter — a small plastic tube or balloon — in the tumor area.<br>
+2.Places highly radioactive material inside the body for a short time and then retracts it using a remote control.<br>
+3.Removes the catheter after you've completed your entire course of treatment. You may need multiple sessions of HDR brachytherapy.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane container fade" id="Dual-Head-SPECT">
+                                    <div class="tab-inner">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="img-sec mb-md-40">
+                                                    <img src="{% static 'assets/images/special_facilities/Dual-Head-SPECT.jpg' %}" class="full-width" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="content-box">
+                                                    <h4 class="text-custom-black">What does Dual-Head SPECT do?</h4>
+                                                    <p class="text-light-white">Regarding myocardial viability, positive predictive value for the diagnosis of myocardial scar tissue was significantly higher for dual-head- as compared to single-head acquisition.</p>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctor -->
+             <section class="section-padding doctors-team-style-2">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Doctors</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                 <div class="col-12 no-padding">
+
+                        <div class="doctors-slider">
+                               {% for doctors in doc_list %}
+                            <div class="slide-item col-12">
+                                <div class="team-block p-relative">
+                                    <div class="inner-box">
+                                        <div class="image animate-img">
+                                            <img src="{{ doctors.profile_pic.url }}" alt="img" class="full-width">
+                                        </div>
+                                        <div class="lower-content p-relative text-center">
+                                            <h5><a href="{{ doctors.get_absolute_url }}" class="text-custom-black fw-200 fs-10">{{ doctors.doctor_name}}</a></h5>
+                                            <p class="designation text-light-white">
+                                                {% for department in doctors.department.all %}
+                                                {{ department }}
+                                                    {% endfor %}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+             {% endfor %}
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- End Team Doctors -->
+
+        <!-- End Team Doctors -->
+        <!-- Start Testimonials -->
+        <section class="testimonials section-padding">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="container">
+                <div class="row">
+                 <div class="col-xl-5 col-lg-6 align-self-center">
+                        <div class="testimonial-box mb-md-80">
+                            <div class="section-header">
+                                <div class="section-heading">
+                                    <h3 class="text-custom-white fw-700">Our Testimonials</h3>
+                                    <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                                    <div class="section-description">
+                                        <p class="text-custom-white">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials-wrapper">
+                                <ul class="testimonials-inner custom testimonial-slider">
+                                    <li>
+                                        <div class="testimonial-content">
+                                            <h6 class="text-custom-white fs-18"><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. <i class="fas fa-quote-right"></i></h6>
+                                            <div class="testimonials-author-box">
+                                                <div class="testimonials-author animate-img rounded-circle">
+                                                    <img src="https://via.placeholder.com/58" class="image-fit rounded-circle" alt="Author image">
+                                                </div>
+                                                <ul class="author-info custom">
+                                                    <li class="text-custom-white fs-18 text-left">Linda Choi<span class="fs-14 fw-300"><i class="fab fa-twitter"></i> @twitterhandle</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="testimonial-content">
+                                            <h6 class="text-custom-white fs-18"><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. <i class="fas fa-quote-right"></i></h6>
+                                            <div class="testimonials-author-box">
+                                                <div class="testimonials-author animate-img rounded-circle">
+                                                    <img src="https://via.placeholder.com/58" class="image-fit rounded-circle" alt="Author image">
+                                                </div>
+                                                <ul class="author-info custom">
+                                                    <li class="text-custom-white fs-18 text-left">Jhon Deo<span class="fs-14 fw-300"><i class="fab fa-twitter"></i> @twitterhandle</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="video-box full-height">
+                            <div class="video_wrapper video_wrapper_full js-videoWrapper">
+                                <iframe class="videoIframe js-videoIframe" src="https://www.youtube.com/watch?v=NxXtJ4hnHbM" data-src="https://www.youtube.com/embed/NxXtJ4hnHbM?autoplay=1" allow="autoplay"></iframe>
+                                <div class="videoPoster js-videoPoster">
+                                    <img src="{% static 'assets/css/images/Banner_1_1920x800.JPG' %}" class="img-fluid full-width" alt="#">
+                                    <div class="video-inner video-btn-wrapper"> <a href="JavaScript:Void(0);" class="text-light-blue"><i class="flaticon-play-button"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials -->
+
+        <!-- Start Blog -->
+
+ <section class="section-padding our_articles">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Blog</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 no-padding">
+                        <div class="blog-slider">
+                            {% for news_list_instance in news_list %}
+                            <article class="post col-12">
+                                <div class="single-blog">
+                                    <div class="post-meta">
+                                      <div class="post-date"><a href="#" class="text-custom-white">{{ news_list_instance.created_at }}</a></div>
+                                    </div>
+                                    <div class="blog-photo">
+                                      <img src="{{ news_list_instance.news_thumbnail.url }}" class="full-width" alt="#">
+                                    </div>
+                                    <div class="post-contnet">
+                                      <h2 class="post-title text-custom-black">{{ news_list_instance.news_title }}</h2>
+                                      <p class="text-light-white">{{ news_list_instance.excert }}....</p>
+                                      <div class="post-author">
+                                        <span class="text-custom-black fw-500 fs-14">Post by <a href="#" class="text-dark">AMCGH</a></span>
+                                      </div>
+                                        <a href="{{ news_list_instance.get_absolute_url }}" class="fw-500 fs-14">Read More</a>
+                                    </div>
+             <div class="blog-overlay">
+                                      <div class="right-text-effect post-content">
+                                        <h4 class="post-title"><a href="{{ news_list_instance.get_absolute_url }}" class="text-white">{{ news_list_instance.news_title }}</a></h4>
+                                      </div>
+
+                                      <div class="blog-read-more-icon">
+                                        <div class="post-author">
+                                          <span class="text-custom-green fw-600 fs-14">Post by <a href="#" class="text-white">AMCGH</a></span>
+                                        </div>
+                                        <a href="{{ news_list_instance.get_absolute_url }}" class="fw-500 fs-14">Read More</a>
+                                      </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End Blog -->
+        <!-- Start Calender -->
+        <section class="section-padding doctor-calendar">
+            <div class="overlay overlay-bg-black"></div>
+            <div class="pattern"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-white fw-700">Doctors Schedule</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-custom-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="doctor-calendar-table table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Time(Am-Pm)</th>
+                                        <th>Saturday</th>
+                                        <th>Sunday</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><span class="time" >9.00-4.00</span></td>
+                                        <td>
+                                            <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Holiday</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Foley</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr.Shariful Alam</h3>
+                                            <span>Clinical Oncology</span>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">9.00-3.00</span></td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                            <br><h3>&</h3><br> <h3>Dr. Abul Ahsan (Didar)</h3><span>Pain & Palliative Care</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                             <br><h3>&</h3><br>
+                                            <h3>Dr. Abul Ahsan (Didar)</h3>
+                                            <span>Pain & Palliative Care</span>
+
+                                        </td>
+
+                                        <td>
+                                            <h3>Dr. Qamruzzaman</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">10.00-2.00</span></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Parveen</h3>
+                                            <span>Medical Oncologist</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="time">3.00-5.00</span></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr. Sadia Sharmin</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Rowshan Ara Begum</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="time">5.00-10.00</span></td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Md. Shariful Islam Johnny</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                            <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                        </td>
+                                        <td>
+                                           <h3>Dr. Arup</h3>
+                                            <span>Oncologist</span>
+                                            <br><h3>&</h3><br>
+                                            <h3>Dr. Md. Shariful Islam Johnny</h3>
+                                            <span>Oncology</span>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                 <section class="section-padding doctors-team-style-2">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <h3 class="text-custom-black fw-700">Our Donors</h3>
+                        <img src="{% static 'assets/images/title-icon.png' %}" class="mb-xl-20" alt="img">
+                        <div class="section-description">
+                            <p class="text-light-white">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                 <div class="col-12 no-padding">
+
+                        <div class="doctors-slider">
+                               {% for donors in donor_list %}
+                            <div class="slide-item col-12">
+                                <div class="team-block p-relative">
+                                    <div class="inner-box">
+                                        <div class="image animate-img">
+                                            <img src="{{ donors.donor_logo.url }}" alt="img" class="full-width">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+             {% endfor %}
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End Calender -->
+        <!-- Start Newsletter -->
+        <section class="newsletter-style-1 section-padding bg-light-blue">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content-wrapper mb-md-40">
+                            <h3 class="text-custom-white fw-600">Join Our Newsletter</h3>
+                            <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter-form-wrapper">
+                            <form>
+                                <div class="input-group">
+                                    <label>
+                                        <input type="email" name="#" class="form-control form-control-custom" placeholder="Email Id">
+                                    </label>
+                                    <div class="input-group-append">
+                                        <button type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter -->
+        <!-- Start Footer -->
+        <footer class="section-padding bg-custom-white footer-style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-box mb-md-40">
+                            <div class="logo">
+                                <a href="{% url 'main_application:Home' %}">
+                                    <img src="{% static 'assets/images/apple-icon-144x144.png' %}" class="img-fluid image-fit" alt="logo" style="height: 144px; width: 144px;">
+                                </a>
+                            </div>
+                            <p class="text-custom-black" style="padding-top: 2em;">
+                                <strong>Ahsania Mission Cancer & General Hospital, Uttara</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-info">
+                            <h5 class="text-custom-black fw-600">Important Links</h5>
+                            <p class="text-custom-black fs-14"><a href="{% url 'main_application:about' %}">About Us</a></p>
+                            <p class="text-custom-black fs-14"><a href="{% url 'main_application:contact-us' %}">Contact Us</a></p>
+                            <p class="text-custom-black fs-14"><a href="{% url 'main_application:governing-body' %}">Governing Body</a></p>
+                            <p class="text-custom-black fs-14"><a href="{% url 'main_application:management-team' %}">Management Team</a></p>
+                            <p class="text-custom-black fs-14"><a href="{% url 'main_application:messageFromPresident' %}">Message From Our President</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-info mb-sm-40">
+                            <h5 class="text-custom-black fw-600">Doctor's Appointment</h5>
+                            <h4 class="text-light-blue fw-600">09678016391</h4>
+                            <h4 class="text-light-blue fw-600">09612310617</h4>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-info">
+                            <h5 class="text-custom-black fw-600">Our Location</h5>
+                            <p class="text-custom-black fs-14">Plot-03, Embankment Drive Way,<br> Sector-10, Uttara Model Town,<br>Dhaka-1230</p>
+                            <p class="no-margin text-custom-black fs-14">
+                                Email: <a href="#" class="text-custom-black fw-600">info@amcghbd.org</a><br>
+                                Phone: <a href="#" class="text-custom-black fw-600">09612-310617</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <!-- Start Copyright -->
+        <div class="copyright-style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p class="text-custom-black">
+                            © 2022 <a href="#" class="fw-600" target="_blank">AMCGH, IT Department.</a> All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-media mb-xl-20">
+                            <ul class="custom">
+                                <li><a href="https://www.facebook.com/ahsaniacancer" class="text-light-grey fs-14"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#" class="text-light-grey fs-14"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright -->
+        <!-- back to top -->
+        <div id="back-top" class="back-top">
+          <a href="#top"><i class="flaticon-up-arrow"></i></a>
+        </div>
+    </div>/>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <!-- Popper -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Range Slider -->
+    <script src="{% static 'assets/js/ion.rangeSlider.min.js '%}"></script>
+    <!-- Slick Slider -->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <!-- Datepicker -->
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.en.js' %}"></script>
+    <!-- Nice Select -->
+    <script src="{% static 'assets/js/jquery.nice-select.js' %}"></script>
+    <!-- Nice Select -->
+    <script src="{% static 'assets/js/particles.js' %}"></script>
+    <!-- Magnific Popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- Isotope Gallery -->
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+<style>
+
+
+</style>
+</html>
+
